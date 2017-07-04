@@ -30,7 +30,9 @@ describe('pollock', function() {
   var TestType;
 
   beforeEach(function() {
-    TestType = function() {};
+    /* eslint-disable func-names, no-shadow */
+    TestType = function TestType() {};
+    /* eslint-enable func-names, no-shadow */
   });
 
   it('should be a function', function() {
