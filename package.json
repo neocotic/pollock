@@ -1,7 +1,7 @@
 {
   "name": "pollock",
-  "version": "0.1.0alpha",
-  "description": "TODO",
+  "version": "0.1.0",
+  "description": "Simple lightweight library for adding abstract methods to types",
   "homepage": "https://github.com/NotNinja/pollock",
   "bugs": {
     "url": "https://github.com/NotNinja/pollock/issues"
@@ -13,7 +13,8 @@
   },
   "license": "MIT",
   "keywords": [
-    "abstract"
+    "abstract",
+    "method"
   ],
   "repository": {
     "type": "git",
