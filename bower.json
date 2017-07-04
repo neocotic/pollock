@@ -1,0 +1,35 @@
+{
+  "name": "pollock",
+  "version": "0.1.0alpha",
+  "description": "TODO",
+  "homepage": "https://github.com/NotNinja/pollock",
+  "authors": [
+    {
+      "name": "Alasdair Mercer",
+      "email": "mercer.alasdair@gmail.com",
+      "homepage": "https://not.ninja"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "abstract"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NotNinja/pollock.git"
+  },
+  "main": "dist/pollock.js",
+  "ignore": [
+    "coverage/",
+    "src/",
+    "test/",
+    ".*",
+    "AUTHORS.md",
+    "CHANGES.md",
+    "CONTRIBUTING.md",
+    "Gruntfile.js",
+    "package.json",
+    "package-lock.json",
+    "README.md"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "notninja/es5",
+  "env": {
+    "node": true
+  },
+  "globals": {
+    "Promise": false
+  }
+}
