@@ -1,12 +1,12 @@
-[![Pollock](https://cdn.rawgit.com/NotNinja/pollock/master/images/pollock.png)](https://github.com/NotNinja/pollock)
+[![Pollock](https://cdn.rawgit.com/neocotic/pollock/master/images/pollock.png)](https://github.com/neocotic/pollock)
 
 A simple lightweight JavaScript library for adding abstract methods to types which, when called, report a useful error
 indicating that they have not been implemented/overridden on the child type.
 
-[![Build Status](https://img.shields.io/travis/NotNinja/pollock/develop.svg?style=flat-square)](https://travis-ci.org/NotNinja/pollock)
-[![Coverage](https://img.shields.io/codecov/c/github/NotNinja/pollock/develop.svg?style=flat-square)](https://codecov.io/gh/NotNinja/pollock)
-[![Dev Dependency Status](https://img.shields.io/david/dev/NotNinja/pollock.svg?style=flat-square)](https://david-dm.org/NotNinja/pollock?type=dev)
-[![License](https://img.shields.io/npm/l/pollock.svg?style=flat-square)](https://github.com/NotNinja/pollock/blob/master/LICENSE.md)
+[![Build Status](https://img.shields.io/travis/neocotic/pollock/develop.svg?style=flat-square)](https://travis-ci.org/neocotic/pollock)
+[![Coverage](https://img.shields.io/codecov/c/github/neocotic/pollock/develop.svg?style=flat-square)](https://codecov.io/gh/neocotic/pollock)
+[![Dev Dependency Status](https://img.shields.io/david/dev/neocotic/pollock.svg?style=flat-square)](https://david-dm.org/neocotic/pollock?type=dev)
+[![License](https://img.shields.io/npm/l/pollock.svg?style=flat-square)](https://github.com/neocotic/pollock/blob/master/LICENSE.md)
 [![Release](https://img.shields.io/npm/v/pollock.svg?style=flat-square)](https://www.npmjs.com/package/pollock)
 
 * [Install](#install)
@@ -27,8 +27,8 @@ $ bower install --save pollock
 
 If you want to simply download the file to be used in the browser you can find them below:
 
-* [Development Version](https://cdn.rawgit.com/NotNinja/pollock/master/dist/pollock.js) (4.6kb - [Source Map](https://cdn.rawgit.com/NotNinja/pollock/master/dist/pollock.js.map))
-* [Production Version](https://cdn.rawgit.com/NotNinja/pollock/master/dist/pollock.min.js) (722b - [Source Map](https://cdn.rawgit.com/NotNinja/pollock/master/dist/pollock.min.js.map))
+* [Development Version](https://cdn.rawgit.com/neocotic/pollock/master/dist/pollock.js) (4.6kb - [Source Map](https://cdn.rawgit.com/neocotic/pollock/master/dist/pollock.js.map))
+* [Production Version](https://cdn.rawgit.com/neocotic/pollock/master/dist/pollock.min.js) (722b - [Source Map](https://cdn.rawgit.com/neocotic/pollock/master/dist/pollock.min.js.map))
 
 ## API
 
@@ -240,18 +240,18 @@ pollock(GraphicObject, 'resize', { typeName: 'GraphicObject' });
 ## Bugs
 
 If you have any problems with pollock or would like to see changes currently in development you can do so
-[here](https://github.com/NotNinja/pollock/issues).
+[here](https://github.com/neocotic/pollock/issues).
 
 ## Contributors
 
 If you want to contribute, you're a legend! Information on how you can do so can be found in
-[CONTRIBUTING.md](https://github.com/NotNinja/pollock/blob/master/CONTRIBUTING.md). We want your suggestions and pull
+[CONTRIBUTING.md](https://github.com/neocotic/pollock/blob/master/CONTRIBUTING.md). We want your suggestions and pull
 requests!
 
-A list of pollock contributors can be found in [AUTHORS.md](https://github.com/NotNinja/pollock/blob/master/AUTHORS.md).
+A list of pollock contributors can be found in [AUTHORS.md](https://github.com/neocotic/pollock/blob/master/AUTHORS.md).
 
 ## License
 
-See [LICENSE.md](https://github.com/NotNinja/pollock/raw/master/LICENSE.md) for more information on our MIT license.
+Copyright © 2018 Alasdair Mercer
 
-[![Copyright !ninja](https://cdn.rawgit.com/NotNinja/branding/master/assets/copyright/base/not-ninja-copyright-186x25.png)](https://not.ninja)
+See [LICENSE.md](https://github.com/neocotic/pollock/raw/master/LICENSE.md) for more information on our MIT license.

@@ -1,17 +1,12 @@
 sudo: false
 language: node_js
 node_js:
-  - "4"
-  - "6"
   - "8"
-before_script:
-  - npm install -g npm@latest
+  - "10"
+  - "11"
 script:
   - npm run ci
-after_script:
+after_success:
   - npm run report-coverage
 notifications:
-  slack:
-    rooms:
-      - secure: 0+t0zunsN9MsPAkUhYr/lgeX65oEGAjFQVd1WJVZWg5Vq5vfPieKzK7T9wpMaO14pZVtNOHrkF4vmq0q7vTKFlOkecH21YWToSYq69+oEpwaH6WO1PSHIQfsQ0TVget4EFNMvx5nkQWWgpA0Pg1qXuSk9qnCFCLtfIEUQbmHZL6L89Hxu0LLKu0vyenOHrF9VxJ6q4ld1FFkldxMvs4YcECyLwTPrehri0vFM+0/AGC9hXhsM+w5HRyLLBYeSFwTkEala7W0lncFPUVv5J/cmRH69EpTASBXZTlBR79fAGmW+Es1mPWgRvSALe+odR0ixsPy/PKMYRcnW70bCWwB7zOx16S7+xfB6J6AOA98Jcg7sp3SGJia+SbOyoKPK6OUCwlUvrSdsHXdQiCTCrLANEeJdFHoiDW1doj2HkYxu3Jp2l9AOsefR35zH49aLWdZI/j5iFmSZgT+bEOI0fF8xD6UI6nBXr4KkO4XgP/cai52LG2wPUZARyu8f7z86xLYmEAhaNYLA/WbtvduzSHRiJ9zFwNoqbqKJ0dn2V/D53vdGNtxBr55nyD52TtMlNa2QLfnZfenlNzSij0BqGh47XfO+SeyGixrakApWjdj16FkLNyuddRu2Nltu1/g3oAfsTGznQlnSj50n8QP4RWGizyeoBJcrWh5pwCQoRLgFCU=
-    on_success: change
+  email: false

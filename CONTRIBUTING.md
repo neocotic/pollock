@@ -1,9 +1,9 @@
 # Contributing
 
-If you have any questions about [pollock](https://github.com/NotNinja/pollock) please feel free to
-[raise an issue](https://github.com/NotNinja/pollock/issues/new).
+If you have any questions about [pollock](https://github.com/neocotic/pollock) please feel free to
+[raise an issue](https://github.com/neocotic/pollock/issues/new).
 
-Please [search existing issues](https://github.com/NotNinja/pollock/issues) for the same feature and/or issue before
+Please [search existing issues](https://github.com/neocotic/pollock/issues) for the same feature and/or issue before
 raising a new issue. Commenting on an existing issue is usually preferred over raising duplicate issues.
 
 Please ensure that all files conform to the coding standards, using the same coding style as the rest of the code base.
@@ -21,5 +21,5 @@ or newer installed.
 
 All pull requests should be made to the `develop` branch.
 
-Don't forget to add your details to the list of [AUTHORS.md](https://github.com/NotNinja/pollock/blob/master/AUTHORS.md)
+Don't forget to add your details to the list of [AUTHORS.md](https://github.com/neocotic/pollock/blob/master/AUTHORS.md)
 if you want your contribution to be recognized by others.
