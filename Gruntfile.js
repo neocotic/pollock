@@ -25,7 +25,7 @@
 module.exports = function(grunt) {
   var commonjs = require('rollup-plugin-commonjs');
   var nodeResolve = require('rollup-plugin-node-resolve');
-  var uglify = require('rollup-plugin-uglify');
+  var uglify = require('rollup-plugin-uglify').uglify;
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
