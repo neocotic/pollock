@@ -1,4 +1,4 @@
-[![Pollock](https://cdn.rawgit.com/neocotic/pollock/master/images/pollock.png)](https://github.com/neocotic/pollock)
+[![Pollock](https://raw.githack.com/neocotic/pollock/master/images/pollock.png)](https://github.com/neocotic/pollock)
 
 A simple lightweight JavaScript library for adding abstract methods to types which, when called, report a useful error
 indicating that they have not been implemented/overridden on the child type.
@@ -27,8 +27,8 @@ $ bower install --save pollock
 
 If you want to simply download the file to be used in the browser you can find them below:
 
-* [Development Version](https://cdn.rawgit.com/neocotic/pollock/master/dist/pollock.js) (4.6kb - [Source Map](https://cdn.rawgit.com/neocotic/pollock/master/dist/pollock.js.map))
-* [Production Version](https://cdn.rawgit.com/neocotic/pollock/master/dist/pollock.min.js) (722b - [Source Map](https://cdn.rawgit.com/neocotic/pollock/master/dist/pollock.min.js.map))
+* [Development Version](https://unpkg.com/pollock/dist/pollock.js) (4.6kb - [Source Map](https://unpkg.com/pollock/dist/pollock.js.map))
+* [Production Version](https://unpkg.com/pollock/dist/pollock.min.js) (723b - [Source Map](https://unpkg.com/pollock/dist/pollock.min.js.map))
 
 ## API
 
