@@ -22,7 +22,7 @@
 
 'use strict';
 
-var expect = require('chai').expect;
+var assert = require('assert');
 
 var pollock = require('../src/pollock');
 
@@ -36,7 +36,7 @@ describe('pollock', function() {
   });
 
   it('should be a function', function() {
-    expect(pollock).to.be.a('function');
+    assert.equal(typeof pollock, 'function');
   });
 
   context('when no options are provided', function() {
@@ -45,9 +45,14 @@ describe('pollock', function() {
 
       var instance = new TestType();
 
-      expect(TestType.foo).to.be.undefined;
-      expect(instance.foo).to.be.a('function');
-      expect(instance.foo).to.throw(Error, 'TestType#foo abstract method is not implemented');
+      assert.ok(!TestType.foo);
+      assert.equal(typeof instance.foo, 'function');
+      assert.throws(
+        instance.foo,
+        function(error) {
+          return error instanceof Error && error.message === 'TestType#foo abstract method is not implemented';
+        }
+      );
     });
   });
 
@@ -58,12 +63,12 @@ describe('pollock', function() {
 
         var instance = new TestType();
 
-        expect(TestType.foo).to.be.undefined;
-        expect(instance.foo).to.be.a('function');
+        assert.ok(!TestType.foo);
+        assert.equal(typeof instance.foo, 'function');
 
         instance.foo(function(error) {
-          expect(error).to.be.an('error');
-          expect(error.message).to.equal('TestType#foo abstract method is not implemented');
+          assert.ok(error instanceof Error);
+          assert.equal(error.message, 'TestType#foo abstract method is not implemented');
 
           done();
         });
@@ -75,9 +80,14 @@ describe('pollock', function() {
 
           var instance = new TestType();
 
-          expect(TestType.foo).to.be.undefined;
-          expect(instance.foo).to.be.a('function');
-          expect(instance.foo.bind(instance, null)).to.throw(Error, 'TestType#foo abstract method is not implemented');
+          assert.ok(!TestType.foo);
+          assert.equal(typeof instance.foo, 'function');
+          assert.throws(
+            instance.foo.bind(instance, null),
+            function(error) {
+              return error instanceof Error && error.message === 'TestType#foo abstract method is not implemented';
+            }
+          );
         });
       });
     });
@@ -88,12 +98,12 @@ describe('pollock', function() {
 
         var instance = new TestType();
 
-        expect(TestType.foo).to.be.undefined;
-        expect(instance.foo).to.be.a('function');
+        assert.ok(!TestType.foo);
+        assert.equal(typeof instance.foo, 'function');
 
         instance.foo('fu', 'baz', function(error) {
-          expect(error).to.be.an('error');
-          expect(error.message).to.equal('TestType#foo abstract method is not implemented');
+          assert.ok(error instanceof Error);
+          assert.equal(error.message, 'TestType#foo abstract method is not implemented');
 
           done();
         });
@@ -105,10 +115,14 @@ describe('pollock', function() {
 
           var instance = new TestType();
 
-          expect(TestType.foo).to.be.undefined;
-          expect(instance.foo).to.be.a('function');
-          expect(instance.foo.bind(instance, 'fu', 'baz', 'fizz')).to.throw(Error,
-            'TestType#foo abstract method is not implemented');
+          assert.ok(!TestType.foo);
+          assert.equal(typeof instance.foo, 'function');
+          assert.throws(
+            instance.foo.bind(instance, 'fu', 'baz', 'fizz'),
+            function(error) {
+              return error instanceof Error && error.message === 'TestType#foo abstract method is not implemented';
+            }
+          );
         });
       });
 
@@ -118,10 +132,14 @@ describe('pollock', function() {
 
           var instance = new TestType();
 
-          expect(TestType.foo).to.be.undefined;
-          expect(instance.foo).to.be.a('function');
-          expect(instance.foo.bind(instance, 'fu', 'baz')).to.throw(Error,
-            'TestType#foo abstract method is not implemented');
+          assert.ok(!TestType.foo);
+          assert.equal(typeof instance.foo, 'function');
+          assert.throws(
+            instance.foo.bind(instance, 'fu', 'baz'),
+            function(error) {
+              return error instanceof Error && error.message === 'TestType#foo abstract method is not implemented';
+            }
+          );
         });
       });
     });
@@ -132,12 +150,12 @@ describe('pollock', function() {
 
         var instance = new TestType();
 
-        expect(TestType.foo).to.be.undefined;
-        expect(instance.foo).to.be.a('function');
+        assert.ok(!TestType.foo);
+        assert.equal(typeof instance.foo, 'function');
 
         instance.foo('fu', 'baz', function(error) {
-          expect(error).to.be.an('error');
-          expect(error.message).to.equal('TestType#foo abstract method is not implemented');
+          assert.ok(error instanceof Error);
+          assert.equal(error.message, 'TestType#foo abstract method is not implemented');
 
           done();
         });
@@ -149,10 +167,14 @@ describe('pollock', function() {
 
           var instance = new TestType();
 
-          expect(TestType.foo).to.be.undefined;
-          expect(instance.foo).to.be.a('function');
-          expect(instance.foo.bind(instance, 'fu', 'baz')).to.throw(Error,
-            'TestType#foo abstract method is not implemented');
+          assert.ok(!TestType.foo);
+          assert.equal(typeof instance.foo, 'function');
+          assert.throws(
+            instance.foo.bind(instance, 'fu', 'baz'),
+            function(error) {
+              return error instanceof Error && error.message === 'TestType#foo abstract method is not implemented';
+            }
+          );
         });
       });
 
@@ -162,12 +184,12 @@ describe('pollock', function() {
 
           var instance = new TestType();
 
-          expect(TestType.foo).to.be.undefined;
-          expect(instance.foo).to.be.a('function');
+          assert.ok(!TestType.foo);
+          assert.equal(typeof instance.foo, 'function');
 
           instance.foo(function(error) {
-            expect(error).to.be.an('error');
-            expect(error.message).to.equal('TestType#foo abstract method is not implemented');
+            assert.ok(error instanceof Error);
+            assert.equal(error.message, 'TestType#foo abstract method is not implemented');
 
             done();
           });
@@ -182,20 +204,20 @@ describe('pollock', function() {
 
       var instance = new TestType();
 
-      expect(TestType.foo).to.be.undefined;
-      expect(instance.foo).to.be.a('function');
+      assert.ok(!TestType.foo);
+      assert.equal(typeof instance.foo, 'function');
 
       var result = instance.foo();
 
-      expect(result).to.be.a('promise');
+      assert.ok(result instanceof Promise);
 
       result
         .then(function() {
           done(new Error('Promise should have been rejected'));
         })
         .catch(function(error) {
-          expect(error).to.be.an('error');
-          expect(error.message).to.equal('TestType#foo abstract method is not implemented');
+          assert.ok(error instanceof Error);
+          assert.equal(error.message, 'TestType#foo abstract method is not implemented');
 
           done();
         });
@@ -208,9 +230,14 @@ describe('pollock', function() {
 
       var instance = new TestType();
 
-      expect(instance.foo).to.be.undefined;
-      expect(TestType.foo).to.be.a('function');
-      expect(TestType.foo).to.throw(Error, 'TestType.foo abstract method is not implemented');
+      assert.ok(!instance.foo);
+      assert.equal(typeof TestType.foo, 'function');
+      assert.throws(
+        TestType.foo,
+        function(error) {
+          return error instanceof Error && error.message === 'TestType.foo abstract method is not implemented';
+        }
+      );
     });
   });
 
@@ -224,13 +251,23 @@ describe('pollock', function() {
 
       var instance = new TestType();
 
-      expect(TestType.foo).to.be.undefined;
-      expect(instance.foo).to.be.a('function');
-      expect(instance.foo).to.throw(Error, 'CustomType#foo abstract method is not implemented');
+      assert.ok(!TestType.foo);
+      assert.equal(typeof instance.foo, 'function');
+      assert.throws(
+        instance.foo,
+        function(error) {
+          return error instanceof Error && error.message === 'CustomType#foo abstract method is not implemented';
+        }
+      );
 
-      expect(instance.bar).to.be.undefined;
-      expect(TestType.bar).to.be.a('function');
-      expect(TestType.bar).to.throw(Error, 'CustomType.bar abstract method is not implemented');
+      assert.ok(!instance.bar);
+      assert.equal(typeof TestType.bar, 'function');
+      assert.throws(
+        TestType.bar,
+        function(error) {
+          return error instanceof Error && error.message === 'CustomType.bar abstract method is not implemented';
+        }
+      );
     });
   });
 
@@ -244,9 +281,14 @@ describe('pollock', function() {
 
       var instance = new TestType();
 
-      expect(TestType.foo).to.be.undefined;
-      expect(instance.foo).to.be.a('function');
-      expect(instance.foo).to.throw(Error, '<anonymous>#foo abstract method is not implemented');
+      assert.ok(!TestType.foo);
+      assert.equal(typeof instance.foo, 'function');
+      assert.throws(
+        instance.foo,
+        function(error) {
+          return error instanceof Error && error.message === '<anonymous>#foo abstract method is not implemented';
+        }
+      );
     });
   });
 });
