@@ -21,6 +21,7 @@
   },
   "main": "dist/pollock.js",
   "ignore": [
+    ".nyc_output/",
     "coverage/",
     "images/",
     "src/",
@@ -29,7 +30,6 @@
     "AUTHORS.md",
     "CHANGES.md",
     "CONTRIBUTING.md",
-    "Gruntfile.js",
     "package.json",
     "package-lock.json",
     "README.md"

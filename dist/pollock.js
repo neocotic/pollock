@@ -1,6 +1,6 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
+  typeof define === 'function' && define.amd ? define('pollock', factory) :
   (global.pollock = factory());
 }(this, (function () { 'use strict';
 
@@ -94,8 +94,9 @@
 
   var pollock_1 = pollock;
 
-  return pollock_1;
+  var pollock$1 = pollock_1;
+
+  return pollock$1;
 
 })));
-
 //# sourceMappingURL=pollock.js.map
