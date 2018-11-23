@@ -27,8 +27,8 @@ $ bower install --save pollock
 
 If you want to simply download the file to be used in the browser you can find them below:
 
-* [Development Version](https://cdn.rawgit.com/neocotic/pollock/master/dist/pollock.js) (4.6kb - [Source Map](https://cdn.rawgit.com/neocotic/pollock/master/dist/pollock.js.map))
-* [Production Version](https://cdn.rawgit.com/neocotic/pollock/master/dist/pollock.min.js) (722b - [Source Map](https://cdn.rawgit.com/neocotic/pollock/master/dist/pollock.min.js.map))
+* [Development Version](https://unpkg.com/pollock/dist/pollock.js) (4.6kb - [Source Map](https://unpkg.com/pollock/dist/pollock.js.map))
+* [Production Version](https://unpkg.com/pollock/dist/pollock.min.js) (722b - [Source Map](https://unpkg.com/pollock/dist/pollock.min.js.map))
 
 ## API
 
