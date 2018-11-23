@@ -1,4 +1,4 @@
-[![Pollock](https://cdn.rawgit.com/neocotic/pollock/master/images/pollock.png)](https://github.com/neocotic/pollock)
+[![Pollock](https://raw.githack.com/neocotic/pollock/master/images/pollock.png)](https://github.com/neocotic/pollock)
 
 A simple lightweight JavaScript library for adding abstract methods to types which, when called, report a useful error
 indicating that they have not been implemented/overridden on the child type.
